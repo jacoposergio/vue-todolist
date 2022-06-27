@@ -6,8 +6,14 @@
     box-sizing: border-box;
   }
 
+  /* COMMON  */
+
   ul{
     list-style-type: none;
+  }
+
+  body{
+    font-family: 'Gill Sans', 'Gill Sans MT'
   }
 
   /* inputs area  */
@@ -26,7 +32,7 @@
 }
 
 .inputs button{
-    padding: 17px 17px;
+    padding: 13px 13px;
     font-size: 20px;
     border-radius: 10px;
     border: 1px solid black;
@@ -42,8 +48,15 @@
     border-radius: 1rem;
 }
 
-.actions{
+.todo{
     display: flex;
     justify-content: space-between;
-    font-size: 1.5rem;
+    font-size: 1.5rem; 
+    border-bottom: 1px solid black;
+    padding: 2rem 0;
 }
+
+  .actions i{
+    cursor: pointer;
+  }
+

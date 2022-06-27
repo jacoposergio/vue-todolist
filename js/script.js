@@ -21,9 +21,22 @@ var app = new Vue(
         data: {
             newTodoText: '',
             todos: [
-                'Fare i compiti',
-                'Fare la spesa',
-                'Fare il bucato'
+                {
+                    text: 'lavare la macchina',
+                    done: false,
+                },
+                {
+                    text: 'comprare il pane',
+                    done: false,
+                },
+                {
+                    text: 'pagare le tasse',
+                    done: false,
+                },
+                {
+                    text: 'contare le galline',
+                    done: false,
+                },
             ]
         },
     }
