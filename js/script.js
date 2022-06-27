@@ -19,10 +19,12 @@ var app = new Vue(
     {
         el: '#root',
         data: {
-                newTodoText: {
-                    text: '',
-                    done: 'false',
-            },
+                newTodoText:
+                    {
+                        text: '',
+                        done: 'false',
+                    },
+                
             todos: [
                 {
                     text: 'lavare la macchina',
@@ -44,7 +46,7 @@ var app = new Vue(
         },
         methods:{
             addNewTodo() {
-            //  pushare nell'array new todo 
+            //  pushare new to do
             this.todos.push(this.newTodoText);
             },
             
