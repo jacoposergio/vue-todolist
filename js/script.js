@@ -28,11 +28,11 @@ var app = new Vue(
                 },
                 {
                     text: 'comprare il pane',
-                    done: false,
+                    done: true,
                 },
                 {
                     text: 'pagare le tasse',
-                    done: false,
+                    done: true,
                 },
                 {
                     text: 'contare le galline',
