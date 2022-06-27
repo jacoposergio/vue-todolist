@@ -32,7 +32,7 @@
 }
 
 .inputs button{
-    padding: 13px 13px;
+    padding: 17px 17px;
     font-size: 20px;
     border-radius: 10px;
     border: 1px solid black;
@@ -54,10 +54,12 @@
     font-size: 1.5rem; 
     border-bottom: 1px solid black;
     padding: 2rem 0;
+
 }
 
-  .actions i{
+  .todo span{
     cursor: pointer;
+    user-select: none;
   }
 
   .already-done{

@@ -19,8 +19,10 @@ var app = new Vue(
     {
         el: '#root',
         data: {
-            currentActiveElement: 0,
-            newTodoText: '',
+                newTodoText: {
+                    text: '',
+                    done: 'false',
+            },
             todos: [
                 {
                     text: 'lavare la macchina',
@@ -40,5 +42,15 @@ var app = new Vue(
                 },
             ]
         },
+        methods:{
+            addNewTodo() {
+            //  pushare nell'array new todo 
+            this.todos.push(this.newTodoText);
+            },
+            
+            removeTodo(index) {
+                this.todos.splice(index, 1);
+            }
+        }
     }
 )

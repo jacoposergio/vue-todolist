@@ -12,23 +12,24 @@
 <body>
     <div id="root">
        <div class="inputs">
-        <input type="text" placeholder="Nuovo Todo">
-        <button>Aggiungi</button>
+        <input v-model="newTodoText"  @keyup.enter="addNewTodo()" type="text" placeholder="Nuovo Todo">
+        <button @click="addNewTodo()">Aggiungi</button>
        </div>
        <div class="todos-container">
-        <ul>
+        <ul v-if="todos.length > 0">
             <!-- TEMPLATE TODO  -->
-            <li v-for="singleTodo in todos" class="todo">
-                <span>{{ singleTodo.text }}</span>
+            <li v-for="singleTodo, index in todos" class="todo">
+                <span @click="singleTodo.done = !singleTodo.done" :class="{'already-done': singleTodo.done === true, }">{{ singleTodo.text }}</span>
                 <div class="actions">
-                    <span><i class="fa-solid fa-xmark"></i></span>
+                    <span @click="removeTodo(index)"><i class="fa-solid fa-xmark"></i></span>
                 </div>
             </li>
            <!-- FINE TEMPLATE TODO  -->
             </li>
         </ul>
+        <h3 v-else>Non hai cose da fare</h3>
        </div>
-
+     
 
 
     </div>
