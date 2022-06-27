@@ -12,7 +12,7 @@
 <body>
     <div id="root">
        <div class="inputs">
-        <input v-model="newTodoText"  @keyup.enter="addNewTodo()" type="text" placeholder="Nuovo Todo">
+        <input ref="inputFile" v-model="newTodoObject.text" @keyup.enter="addNewTodo()" type="text" placeholder="Nuovo todo" >
         <button @click="addNewTodo()">Aggiungi</button>
        </div>
        <div class="todos-container">

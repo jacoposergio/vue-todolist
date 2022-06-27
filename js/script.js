@@ -19,7 +19,7 @@ var app = new Vue(
     {
         el: '#root',
         data: {
-                newTodoText:
+                newTodoObject:
                     {
                         text: '',
                         done: 'false',
@@ -46,13 +46,17 @@ var app = new Vue(
         },
         methods:{
             addNewTodo() {
-            //  pushare new to do
-            this.todos.push(this.newTodoText);
+                  if(this.newTodoObject.text.length > 0) {
+                    // Pushare nell'array newTodoObject
+                    this.todos.push(this.newTodoObject);
+                    // ! pulisco la casella al submits
+                    this.newTodoObject++;
+                }
             },
             
             removeTodo(index) {
                 this.todos.splice(index, 1);
-            }
+            },
         }
     }
 )
