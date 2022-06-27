@@ -19,6 +19,7 @@ var app = new Vue(
     {
         el: '#root',
         data: {
+            currentActiveElement: 0,
             newTodoText: '',
             todos: [
                 {
